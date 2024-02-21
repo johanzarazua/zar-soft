@@ -24,10 +24,10 @@
             <img src="https://img.shields.io/website?url=http%3A%2F%2Fwww.zar%2Dsoft.com%2F">
         </a>
         <!-- <img src="https://img.shields.io/badge/launched-february%202024-teal"> -->
-        <a href="https://github.com/johanzarazua/ZarSoft/commits/main">
+        <a href="https://github.com/johanzarazua/zar-soft/commits/main">
             <img src="https://img.shields.io/github/last-commit/johanzarazua/ZarSoft?color=blue&label=updated">
         </a>
-        <a href="https://www.github.com/johanzarazua/ZarSoft/releases/latest">
+        <a href="https://www.github.com/johanzarazua/zar-soft/releases/latest">
             <img src="https://img.shields.io/github/v/release/johanzarazua/ZarSoft?color=blueviolet&label=version">
         </a>
     </h3>
