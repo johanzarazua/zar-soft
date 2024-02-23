@@ -1,0 +1,45 @@
+@import "variables";
+
+.card{
+  border: 0px;
+}
+
+.zs-steps{
+  background-color: $bg-principal;
+  color: $bg-secundario-1;
+}
+
+.bsb-btn-circle {
+  align-items: center;
+  backface-visibility: hidden;
+  border-radius: 50% !important;
+  display: inline-flex;
+  height: 2.5rem;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  width: 2.5rem;
+}
+
+.btn-accent {
+  --bs-btn-color: #{$bg-principal};
+  --bs-btn-bg: #{$bg-secundario-2-dark};
+  --bs-btn-border-color: #{$bg-secundario-2-dark};
+  --bs-btn-hover-color: #{$bg-principal};
+  --bs-btn-hover-bg: #{$bg-secundario-2};
+  --bs-btn-hover-border-color: #{$bg-secundario-2};
+  --bs-btn-focus-shadow-rgb: 62, 185, 108;
+  --bs-btn-active-color: #{$bg-principal};
+  --bs-btn-active-bg: #{$bg-secundario-2};
+  --bs-btn-active-border-color: #{$bg-secundario-2};
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  --bs-btn-disabled-color: #{$bg-principal};
+  --bs-btn-disabled-bg: #{$bg-secundario-2-dark};
+  --bs-btn-disabled-border-color: #{$bg-secundario-2-dark};
+}
+
+
+.link-steps{
+  color: hsl(256, 68%, 20%);
+  text-decoration: none;
+}

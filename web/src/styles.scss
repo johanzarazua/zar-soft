@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+html, body {
+  font-family: 'Mulish', sans-serif !important;
+  letter-spacing: 0.5px;
+}
+
+:root {
+  --bs-pink-custom: hsl(324.83, 100%, 60.2%);
+  --bs-gray-costom: #343a40;
+  --bd-gray-rgb: #bcbcbc;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+}
+
+$bd-pink-hover: hsl(324.83, 100%, 53%);
+$bd-pink-active: hsl(324.83, 100%, 48%);
+
+.btn-custom {
+  // --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-pink-custom);
+  --bs-btn-border-color: var(--bs-pink-custom);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{$bd-pink-hover};
+  --bs-btn-hover-border-color:#{$bd-pink-hover};
+  --bs-btn-focus-shadow-rgb: #{$bd-pink-hover};
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{$bd-pink-active};
+  --bs-btn-active-border-color: #{$bd-pink-active};
+}

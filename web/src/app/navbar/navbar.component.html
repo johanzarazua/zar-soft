@@ -1,0 +1,52 @@
+<nav class="zsnav navbar fixed-top navbar-expand-md px-2 px-md-3 px-lg-5" id="zsnav">
+  <div class="container-fluid">
+    <a class="navbar-brand fs-2" ref="#sec-banner">
+      <img src="{{logo}}" alt="Logo" width="50" height="50" class="d-inline-block align-text-center" ref="#sec-banner">
+      {{title}}
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <fa-icon [icon]="['fas', 'bars']" style="color: #efe9fb;"></fa-icon>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-1 me-lg-3">
+        <li class="nav-item">
+          <a class="nav-link" ref="#sec-servicios">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" ref="#sec-metodologia">Metodología</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" ref="#sec-nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item px-md-3 d-flex">
+          <button class="my-auto btn btn-secondary btn-custom fw-medium" ref="#sec-contacto">
+            Contacto
+          </button>
+          <!-- <a class="nav-link" href="#">Contacto</a> -->
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+      <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>

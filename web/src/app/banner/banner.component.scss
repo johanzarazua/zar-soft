@@ -1,0 +1,38 @@
+@import "variables";
+
+.zs-banner {
+  background-color: $bg-principal;
+  color: $bg-secundario-1;
+  height: 600px;
+  max-height: 650px;
+  // padding-block: 300px;
+
+  @media screen and (max-width: $large) {
+    // padding-block: 250px;
+  }
+}
+
+.zs-banner-body {
+  height: 600px;
+  max-height: 650px;
+}
+
+.zs-img-banner{
+  width: 95%;
+  height: 95%;
+}
+
+
+// .zs-banner{
+//   background-color: hsl(256, 68%, 17%);
+//   color: $bg-secundario-1;
+//   padding-block: 300px;
+
+//   @media screen and (max-width: $large) {
+//     // padding-block: 250px;
+//   }
+// }
+
+// .zs-banner .row{
+//   margin-inline: 10px;
+// }

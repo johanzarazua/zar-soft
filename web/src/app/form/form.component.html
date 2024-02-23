@@ -1,0 +1,123 @@
+<section class="my-3 py-5" id="sec-contacto">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 mb-3 mb-md-0 col-md-6">
+        <h2 class="display-4 fw-bold mb-4">Contáctanos</h2>
+        <p class="fs-5 mb-3 text-secondary">Déjanos tu información de contacto con una breve descripción del proyecto que tienes en mente. Nos comunicaremos lo más pronto posible.
+          <br>
+          También puedes contactarnos vía Whatsapp para una asesoría personalizada de tu proyecto
+        </p>
+        <div class="text-center">
+          <button class="btn btn-success w-50">
+            <i class="bi bi-whatsapp"></i>
+            Whatsapp
+          </button>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="p-5 border rounded-3 bg-light" id="form-contact">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" [ngClass]="
+                        contactForm.controls.name.pristine && contactForm.controls.name.untouched ?
+                        '' : contactForm.controls.name.invalid && (
+                          contactForm.controls.name.dirty || contactForm.controls.name.touched
+                        ) ? 'is-invalid' : 'is-valid'" formControlName="name" id="name" name="name" placeholder="Nombre"
+              title="Ingrese su nombre completo" autocomplete="off" value="" maxlength="100">
+            <label for="name"><!-- <small>*</small>--> Nombre</label>
+        
+            <div class="invalid-feedback">
+              <p *ngIf="contactForm.controls.name.errors?.['required']">El nombre es requerido.</p>
+              <p *ngIf="contactForm.controls.name.errors?.['pattern']">No cumple con el formato.</p>
+              <p *ngIf="contactForm.controls.name.errors?.['maxlength']">El nombre debe contener maximo 100 caracteres.</p>
+            </div>
+        
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" [ngClass]="
+                        contactForm.controls.email.pristine && contactForm.controls.email.untouched ?
+                        '' : contactForm.controls.email.invalid && (
+                          contactForm.controls.email.dirty || contactForm.controls.email.touched
+                        ) ? 'is-invalid' : 'is-valid'" formControlName="email" id="email" name="email"
+              placeholder="name@ejemplo.com" required="" title="Ingrese un correo electronico de contacto" autocomplete="off"
+              value="" maxlength="500">
+            <label for="email"><!-- <small>*</small>--> Email</label>
+        
+            <div class="invalid-feedback">
+              <p *ngIf="contactForm.controls.email.errors?.['required']">El email es requerido.</p>
+              <p *ngIf="contactForm.controls.email.errors?.['email']">No cumple con el formato.</p>
+              <p *ngIf="contactForm.controls.email.errors?.['maxlength']">El email debe contener maximo 500 caracteres.</p>
+            </div>
+          </div>
+        
+          <div class="form-floating mb-3">
+            <select class="form-select" aria-label="Default select example" formControlName="country" id="country"
+              name="country" (change)="chnageContryCode($event)" [ngClass]="
+                                  contactForm.controls.country.pristine && contactForm.controls.country.untouched ?
+                                  '' : contactForm.controls.country.invalid && (
+                                    contactForm.controls.country.dirty || contactForm.controls.country.touched
+                                  ) ? 'is-invalid' : 'is-valid'">
+              <option *ngFor="let item of options" value="{{item.value}}">
+                {{item.value == "" ? "" : "("+item.value+")"}} {{item.desc}}
+              </option>
+            </select>
+            <label for="floatingSelect">pais del numero telefonico</label>
+        
+            <div class="invalid-feedback">
+              <p *ngIf="contactForm.controls.country.errors?.['required']">El pais es requerido.</p>
+            </div>
+          </div>
+        
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" [ngClass]="
+                        contactForm.controls.phone.pristine && contactForm.controls.phone.untouched ?
+                        '' : contactForm.controls.phone.invalid && (
+                          contactForm.controls.phone.dirty || contactForm.controls.phone.touched
+                        ) ? 'is-invalid' : 'is-valid'" formControlName="phone" id="phone" name="phone" placeholder="5526487489"
+              title="Ingrese un numero telefonico de contacto" autocomplete="off" value=""
+              onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+            <label for="phone"><!-- <small>*</small>--> Telefono</label>
+        
+            <div class="invalid-feedback">
+              <p *ngIf="contactForm.controls.phone.errors?.['required']">El telefono es requerido.</p>
+              <!-- <p *ngIf="contactForm.controls.phone.errors?.['min'] || contactForm.controls.phone.errors?.['max']">
+                          La longitud del numero de telefono debe ser entre 10 y 10 caracteres
+                        </p> -->
+              <p *ngIf="contactForm.controls.phone.errors?.['pattern']">No cumple con el formato. numero s 10 digitos</p>
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Cuentanos que necesitas" [ngClass]="
+                        contactForm.controls.description.pristine && contactForm.controls.description.untouched ?
+                        '' : contactForm.controls.description.invalid && (
+                          contactForm.controls.description.dirty || contactForm.controls.description.touched
+                        ) ? 'is-invalid' : 'is-valid'" formControlName="description" id="description" name="description"
+              style="height: 100px; resize:none;" title="Ingrese una descripcion del proyecto que desea realizar"
+              autocomplete="off" maxlength="500" (keyup)="chnageDescription($event)"></textarea>
+            <label for="description"><!-- <small>*</small>--> Comentarios</label>
+            <div class="row">
+              <div class="offset-10 col-1 offset-lg-11 ps-lg-0 ps-xl-3">
+                <span>{{charCount}}</span>
+              </div>
+            </div>
+        
+            <div class="invalid-feedback">
+              <p *ngIf="contactForm.controls.description.errors?.['required']">La descripcion es requerida.</p>
+              <p *ngIf="contactForm.controls.description.errors?.['maxlength']">La descripcion debe contener maximo 500
+                caracteres.</p>
+            </div>
+          </div>
+        
+        
+        
+          <button class="w-100 btn btn-lg btn-custom" type="submit" id="btn-enviar" [disabled]="!contactForm.valid">
+            Enviar
+          </button>
+        
+          <!-- <p>Form Status: {{ contactForm.status }}</p> -->
+          <!-- <hr class="my-4">
+                  <small class="text-muted" >* Campos requeridos</small> -->
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

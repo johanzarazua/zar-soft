@@ -1,0 +1,40 @@
+<div class="container-fluid zs-tecnologies">
+  <div class="container py-2">
+    <!-- <div class="row justify-content-center">
+      <div class="col-auto">
+        <h2 class="fs-3 fw-medium lh-base">
+          Tecnologias que usamos
+        </h2>
+      </div>
+    </div> -->
+    <div class="row mt-4">
+      <div class="col-1 align-self-center text-center">
+        <button type="button" class="btn btn-sm btn-carousel-custom" data-bs-target="#carouselExampleSlidesOnly"
+          data-bs-slide="prev" id="btn-prev" aria-label="btn-prev">
+          <fa-icon [icon]="['fas', 'caret-left']" size="lg"></fa-icon>
+        </button>
+      </div>
+      <div class="col-10">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item"
+              *ngFor="let item of [].constructor(getLengthSlides(slides.length));let indx = index;let isFirst = first"
+              [ngClass]="{active:isFirst}">
+              <div class="row">
+                <div class="col-4 text-center" *ngFor="let slide of getSlides(indx);let index = index;">
+                  <img src="{{slide.item.img}}" class="img-fluid" alt="{{slide.item.title}}">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-1 align-self-center text-center">
+        <button type="button" class="btn btn-sm btn-carousel-custom" data-bs-target="#carouselExampleSlidesOnly"
+          data-bs-slide="next" id="btn-next" aria-label="btn-next">
+          <fa-icon [icon]="['fas', 'caret-right']" size="lg"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
