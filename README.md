@@ -93,7 +93,7 @@ In order to deploy the project, Dockerfiles and docker-compose.yml files were us
 
 ## Contact
 <p align="center">
-  <a href="hmailto:johanzarazua@gmail.com">
+  <a href="mailto:johanzarazua@gmail.com">
     <img src="https://skillicons.dev/icons?i=gmail&theme=light" />
   </a>
   &nbsp;
